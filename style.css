@@ -1,0 +1,46 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+.dark ::-webkit-scrollbar-thumb {
+    background: #334155;
+}
+
+/* Animations */
+.tool-card:hover {
+    transform: translateY(-8px);
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+#modalOverlay.active {
+    display: flex;
+}
+
+#modalContent.active {
+    scale: 1;
+    opacity: 1;
+}
+
+input, textarea, select {
+    @apply focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 transition-all;
+}
+
+/* Tool Specific */
+.canvas-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+progress::-webkit-progress-bar { background-color: #f3f4f6; border-radius: 10px; }
+progress::-webkit-progress-value { background-color: #2563eb; border-radius: 10px; }
